@@ -1,0 +1,84 @@
+{
+    "uuid": "ef417c7d-3514-49eb-b221-148f33b3fc9e",
+    "name": "edge",
+    "computation_requirements": {
+        "cpu_arch": "x86_64",
+        "cpu_min_freq": 0,
+        "cpu_min_count": 1,
+        "ram_size_mb": 128.0,
+        "storage_size_gb": 10.0
+    },
+    "configuration": {
+        "conf_type": "CLOUD_INIT",
+        "script": ""
+    },
+    "image": {
+        "uri": "file:///home/osboxes/Scrivania/one_node_deployment/architecture_repository/architectures/federated_learning/entities/federated-edge.tar.gz",
+        "checksum": "",
+        "format": "tar.gz"
+    },
+    "hypervisor": "LXD",
+    "migration_kind": "COLD",
+    "interfaces": [
+    	{
+            "name": "eth0",
+            "is_mgmt": true,
+            "if_type": "EXTERNAL",
+            "virtual_interface": {
+                "intf_type": "BRIDGED",
+                "vpci": "lxdbr0",
+                "bandwidth": 10
+            },
+            "cp_id": "74140de8-054e-472e-8f37-7e315b661bce"
+        },
+    	{
+            "name": "eth1",
+            "is_mgmt": false,
+            "if_type": "INTERNAL",
+            "virtual_interface": {
+                "intf_type": "VIRTIO",
+                "vpci": "0:0:0",
+                "bandwidth": 10
+            },
+            "cp_id": "6bcb9d09-a315-4db5-b3b9-f3c099b9980f"
+        },
+        {
+            "name": "eth2",
+            "is_mgmt": false,
+            "if_type": "INTERNAL",
+            "virtual_interface": {
+                "intf_type": "VIRTIO",
+                "vpci": "0:0:0",
+                "bandwidth": 10
+            },
+            "cp_id": "251f6edd-b3af-4878-acb6-c30cde2ef9b9"
+        },
+        {
+            "name": "eth3",
+            "is_mgmt": false,
+            "if_type": "INTERNAL",
+            "virtual_interface": {
+                "intf_type": "VIRTIO",
+                "vpci": "0:0:0",
+                "bandwidth": 10
+            },
+            "cp_id": "3e78036b-d715-43a0-9bde-4a1a32ecae76"
+        }
+    ],
+    "io_ports": [],
+    "connection_points": [
+        {
+            "uuid": "6bcb9d09-a315-4db5-b3b9-f3c099b9980f",
+            "pair_id": "4afe4eb4-59fb-4aa8-b372-9e9daca91a59"
+        },
+        {
+            "uuid": "251f6edd-b3af-4878-acb6-c30cde2ef9b9",
+            "pair_id": "c1a763a1-ebf2-4ff1-b593-2ae6078361db"
+        },
+        {
+            "uuid": "3e78036b-d715-43a0-9bde-4a1a32ecae76",
+            "pair_id": "b233226a-9e8f-47a2-bab5-76b77116bffb"
+        }
+    ],
+    "depends_on": []
+}

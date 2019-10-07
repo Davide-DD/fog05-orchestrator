@@ -1,0 +1,15 @@
+{
+    "uuid": "ae81fa52-81f2-4a72-a3bd-709c9f5d094e",
+    "name": "coordinator-master_aggregator-network",
+    "net_type": "ELAN",
+    "is_mgmt": false,
+    "vlan_id": 52,
+    "ip_configuration": {
+        "ip_version": "IPV4",
+        "subnet": "192.168.236.0/24",
+        "gateway": "192.168.236.1",
+        "dhcp_enable": true,
+        "dhcp_range": "192.168.236.2,192.168.236.100",
+        "dns": "8.8.8.8,8.8.4.4"
+    }
+}

@@ -1,0 +1,58 @@
+{
+    "uuid": "cb8ec842-a1eb-45d6-a648-1bafa9368950",
+    "name": "master_aggregator",
+    "computation_requirements": {
+        "cpu_arch": "x86_64",
+        "cpu_min_freq": 0,
+        "cpu_min_count": 1,
+        "ram_size_mb": 128.0,
+        "storage_size_gb": 10.0
+    },
+    "configuration": {
+        "conf_type": "CLOUD_INIT",
+        "script": ""
+    },
+    "image": {
+        "uri": "file:///home/osboxes/Scrivania/one_node_deployment/architecture_repository/architectures/federated_learning/entities/master-aggregator.tar.gz",
+        "checksum": "",
+        "format": "tar.gz"
+    },
+    "hypervisor": "LXD",
+    "migration_kind": "LIVE",
+    "interfaces": [
+    	{
+            "name": "eth0",
+            "is_mgmt": false,
+            "if_type": "INTERNAL",
+            "virtual_interface": {
+                "intf_type": "VIRTIO",
+                "vpci": "0:0:0",
+                "bandwidth": 10
+            },
+            "cp_id": "e7c04356-2eea-434d-ac35-c30d3807b1da"
+        },
+        {
+            "name": "eth1",
+            "is_mgmt": false,
+            "if_type": "INTERNAL",
+            "virtual_interface": {
+                "intf_type": "VIRTIO",
+                "vpci": "0:0:0",
+                "bandwidth": 10
+            },
+            "cp_id": "fa425c81-1ad6-486a-8113-4c2e156524e0"
+        }
+    ],
+    "io_ports": [],
+    "connection_points": [
+        {
+            "uuid": "e7c04356-2eea-434d-ac35-c30d3807b1da",
+            "pair_id": "ae81fa52-81f2-4a72-a3bd-709c9f5d094e"
+        },
+        {
+            "uuid": "fa425c81-1ad6-486a-8113-4c2e156524e0",
+            "pair_id": "18abf8f4-1433-4db2-8e9a-418e505ed9fb"
+        }
+    ],
+    "depends_on": []
+}

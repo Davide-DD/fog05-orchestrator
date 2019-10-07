@@ -1,0 +1,43 @@
+{
+    "uuid": "a1b6fa9f-d475-48a8-9d17-b89ab659b1a5",
+    "name": "federated-thing",
+    "computation_requirements": {
+        "cpu_arch": "x86_64",
+        "cpu_min_freq": 0,
+        "cpu_min_count": 1,
+        "ram_size_mb": 128.0,
+        "storage_size_gb": 10.0
+    },
+    "configuration": {
+        "conf_type": "CLOUD_INIT",
+        "script": ""
+    },
+    "image": {
+        "uri": "file:///home/osboxes/Scrivania/one_node_deployment/architecture_repository/architectures/federated_learning/entities/thing.tar.gz",
+	"checksum": "",
+	"format": "tar.gz"
+    },
+    "hypervisor": "LXD",
+    "migration_kind": "COLD",
+    "interfaces": [
+        {
+            "name": "eth0",
+            "is_mgmt": false,
+            "if_type": "INTERNAL",
+            "virtual_interface": {
+                "intf_type": "VIRTIO",
+                "vpci": "0:0:0",
+                "bandwidth": 10
+            },
+            "cp_id": "6d65c234-c6bf-400a-9836-28f4c49df755"
+        }
+    ],
+    "io_ports": [],
+    "connection_points": [
+        {
+            "uuid": "6d65c234-c6bf-400a-9836-28f4c49df755",
+            "pair_id": "b233226a-9e8f-47a2-bab5-76b77116bffb"
+        }
+    ],
+    "depends_on": []
+}

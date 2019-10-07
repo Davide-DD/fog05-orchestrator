@@ -1,0 +1,43 @@
+{
+    "uuid": "a5c63766-2f46-4d25-aae4-aca8c41c9207",
+    "name": "gossip-thing",
+    "computation_requirements": {
+        "cpu_arch": "x86_64",
+        "cpu_min_freq": 0,
+        "cpu_min_count": 1,
+        "ram_size_mb": 128.0,
+        "storage_size_gb": 10.0
+    },
+    "configuration": {
+        "conf_type": "CLOUD_INIT",
+        "script": ""
+    },
+    "image": {
+        "uri": "file:///home/osboxes/Scrivania/one_node_deployment/architecture_repository/architectures/gossip_learning/descriptors/gossip_thing.tar.gz",
+	"checksum": "",
+	"format": "tar.gz"
+    },
+    "hypervisor": "LXD",
+    "migration_kind": "COLD",
+    "interfaces": [
+        {
+            "name": "eth0",
+            "is_mgmt": false,
+            "if_type": "INTERNAL",
+            "virtual_interface": {
+                "intf_type": "VIRTIO",
+                "vpci": "0:0:0",
+                "bandwidth": 10
+            },
+            "cp_id": "45a1dc96-f044-46ed-8e42-a0cc956ccfd5"
+        }
+    ],
+    "io_ports": [],
+    "connection_points": [
+        {
+            "uuid": "45a1dc96-f044-46ed-8e42-a0cc956ccfd5",
+            "pair_id": "6b72444e-e3bf-4e9a-8f1c-595d8857b2f0"
+        }
+    ],
+    "depends_on": []
+}

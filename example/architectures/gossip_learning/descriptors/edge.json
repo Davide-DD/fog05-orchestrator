@@ -1,0 +1,69 @@
+{
+    "uuid": "c4f7ae9f-4c9f-4f6a-b179-ba10c03141d4",
+    "name": "gossip-edge",
+    "computation_requirements": {
+        "cpu_arch": "x86_64",
+        "cpu_min_freq": 0,
+        "cpu_min_count": 1,
+        "ram_size_mb": 128.0,
+        "storage_size_gb": 10.0
+    },
+    "configuration": {
+        "conf_type": "CLOUD_INIT",
+        "script": ""
+    },
+    "image": {
+        "uri": "file:///home/osboxes/Scrivania/one_node_deployment/architecture_repository/architectures/gossip_learning/descriptors/gossip_edge.tar.gz",
+        "checksum": "",
+        "format": "tar.gz"
+    },
+    "hypervisor": "LXD",
+    "migration_kind": "LIVE",
+    "interfaces": [
+    	{
+            "name": "eth0",
+            "is_mgmt": true,
+            "if_type": "EXTERNAL",
+            "virtual_interface": {
+                "intf_type": "BRIDGED",
+                "vpci": "lxdbr0",
+                "bandwidth": 10
+            },
+            "cp_id": "90d6660f-cc3b-4a64-a2b3-969c323e7ee3"
+        },
+    	{
+            "name": "eth1",
+            "is_mgmt": false,
+            "if_type": "INTERNAL",
+            "virtual_interface": {
+                "intf_type": "VIRTIO",
+                "vpci": "0:0:0",
+                "bandwidth": 10
+            },
+            "cp_id": "1444f3a9-217d-46db-bf60-91559ae5c226"
+        },
+        {
+            "name": "eth2",
+            "is_mgmt": false,
+            "if_type": "INTERNAL",
+            "virtual_interface": {
+                "intf_type": "VIRTIO",
+                "vpci": "0:0:0",
+                "bandwidth": 10
+            },
+            "cp_id": "f8cc0c03-fcb2-48ea-872a-0b8de350cb87"
+        }
+    ],
+    "io_ports": [],
+    "connection_points": [
+        {
+            "uuid": "1444f3a9-217d-46db-bf60-91559ae5c226",
+            "pair_id": "923b951d-7de6-4317-bdb1-e325ca10d026"
+        },
+        {
+            "uuid": "f8cc0c03-fcb2-48ea-872a-0b8de350cb87",
+            "pair_id": "6b72444e-e3bf-4e9a-8f1c-595d8857b2f0"
+        }
+    ],
+    "depends_on": []
+}
