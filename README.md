@@ -46,7 +46,7 @@ The offered operations are four, also defining a lifecycle for an ActiveStrategy
 
 ## Test use case
 
-In the folder **example**, you can try out the test execution we used for this master thesis. You just need to copy **data** to the **architecture_data_repository** folder of the **src** folder, then copy what is inside **architectures** to the **architectures** folder (**src** -> **architecture_repository**), finally copy **run.py** to the **src** folder. Modify **run.py** to provide the correct paths and then execute it providing the address of the YAKS instance.
+In the folder **example**, you can try out the test execution we used for this master thesis. First, you need to copy **data** to the **architecture_data_repository** folder of the **src** folder. Then, copy what is inside **architectures** to the **architectures** folder (**src** -> **architecture_repository**); you will need images for the entities of these architectures: in order to get them, you can use [**this link**](https://drive.google.com/open?id=1JGM00qZzfJq8ertImiCVeU4gt7Kugxb_) or just use random LXC images (but you will not be able to see the prediction service in action). Finally, copy **run.py** to the **src** folder. Modify **run.py** to provide the correct paths and then execute it providing the address of the YAKS instance.
 
 ## License and more
 
