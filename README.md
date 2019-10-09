@@ -4,6 +4,7 @@
 However, there is still the need to effectively and efficiently manage finer-grain dependencies and large deployment scenarios, where we cannot just write a long and complex Python script employing fogØ5 APIs, as it will result in a code that is unreadable and hard to maintain and extend. This orchestrator aims to solve the aforementioned problems, enriching the functionalities already offered by fogØ5 through an extended management paradigm that permits to:
 * Specify ***fine-grain dependencies*** of the entities, in order to provide them all the information they need for a correct execution
 * Define ***combinations of entities*** (in our case, called ***architectures***) that offer the same business service and effectively and efficiently employ them (one at a time) to provide the aforementioned service by using a continuous monitoring of the QoS of the active architecture and substituting it with one of the others in case the quality decreases below a predefined threshold
+What follows is a brief description of the orchestrator and the files in this repository, but if you are interested in finer details you can check out my master thesis [here]().
 
 ## Motivations
 
