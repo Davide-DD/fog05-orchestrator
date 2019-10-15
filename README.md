@@ -5,7 +5,7 @@ However, there is still the need to effectively and efficiently manage finer-gra
 * Specify ***fine-grain dependencies*** of the entities, in order to provide them all the information they need for a correct execution
 * Define ***combinations of entities*** (in our case, called ***architectures***) that offer the same business service and effectively and efficiently employ them (one at a time) to provide the aforementioned service by using a continuous monitoring of the QoS of the active architecture and substituting it with one of the others in case the quality decreases below a predefined threshold
 
-What follows is a brief description of the orchestrator and the files in this repository, but if you are interested in finer details you can check out my master thesis [here](https://amslaurea.unibo.it/19021/).
+What follows is a brief description of the orchestrator and the files in this repository, but if you are interested in finer details you can check out my master thesis [here](https://amslaurea.unibo.it/19021/1/Tesi_Davide_Di_Donato.pdf).
 
 ## Motivations
 
